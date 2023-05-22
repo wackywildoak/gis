@@ -1,6 +1,5 @@
 from time import sleep
 from threading import Thread
-from tkinter import *
 import sys
 import pyautogui as pag
 import gisFind
@@ -98,8 +97,9 @@ def tabs(): #открытие вкладки
     pag.click()
     clicks()
 
-def main():
-    for j in range(0, 50):
+def tab_loop(): #все функции программы
+    ql = int(input("кол-во повторений"))
+    for j in range(0, ql):
         update_tab()
         add_tab()
         tabs()
@@ -111,8 +111,10 @@ def exit_programm():
         if keyboard.is_pressed("x"):
             sys.exit()   
 
-if __name__ == "__main__":
-    Thread(target=main, daemon=True).start()
+def main():
+    Thread(target=tab_loop, daemon=True).start()
     exit_programm()
-    
+
+if __name__ == "__main__":
+    main()
 #при использовании, ставить масштаб в хроме 90%

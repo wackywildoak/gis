@@ -1,14 +1,13 @@
 import pyautogui as pag
-from time import sleep
 
 def find():
     image = ["find1.png", "find2.png", "find3.png"]
     id = 0
     while True:
-        mousePosX, mousePosY = pag.position() #найти координаты по расположению мышки
+        # mousePosX, mousePosY = pag.position() #найти координаты по расположению мышки
         pag.moveTo(63, 7)
         try:
-            template = pag.locateOnScreen(image/image[id])
+            template = pag.locateOnScreen(image[id])
         except IndexError:
             print("Ошибка")
             break
