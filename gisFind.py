@@ -8,7 +8,7 @@ def find():
         mousePosX, mousePosY = pag.position() #найти координаты по расположению мышки
         pag.moveTo(63, 7)
         try:
-            template = pag.locateOnScreen(image[id])
+            template = pag.locateOnScreen(image/image[id])
         except IndexError:
             print("Ошибка")
             break
