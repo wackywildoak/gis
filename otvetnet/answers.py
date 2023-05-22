@@ -11,8 +11,8 @@ delay = 1
 # print(screenHeight, screenWidth)
 # mousePosX, mousePosY = pag.position() #найти координаты по расположению мышки
 # print(mousePosX, mousePosY)
-# # pag.moveTo(1411, 841)
-# # pag.click()
+# pag.moveTo(1411, 841)
+# pag.click()
 
 def update_tab(): #переход на основую вкладку и обновление запросов на ней
     pag.moveTo(48, 14)
@@ -98,13 +98,13 @@ def tabs(): #открытие вкладки
     clicks()
 
 def tab_loop(): #все функции программы
-    ql = int(input("кол-во повторений"))
-    for j in range(0, ql):
+    ql = int(input("кол-во повторений: "))
+    for i in range(0, ql):
         update_tab()
         add_tab()
         tabs()
         close_tabs()
-        print("Отвечено на", (j + 1) * 10, "запросов")
+        print("Отвечено на", (i + 1) * 10, "запросов")
         
 def exit_programm(): #выход из программы нажатием на x
     while True:
@@ -117,4 +117,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
 #при использовании, ставить масштаб в хроме 90%
