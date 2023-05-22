@@ -106,7 +106,7 @@ def tab_loop(): #все функции программы
         close_tabs()
         print("Отвечено на", (j + 1) * 10, "запросов")
         
-def exit_programm():
+def exit_programm(): #выход из программы нажатием на x
     while True:
         if keyboard.is_pressed("x"):
             sys.exit()   
