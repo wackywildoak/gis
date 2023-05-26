@@ -111,7 +111,7 @@ def exit_programm(): #выход из программы нажатием на x
         if keyboard.is_pressed("x"):
             sys.exit()   
 
-def main():
+def main(): #функция мейн
     Thread(target=tab_loop, daemon=True).start()
     exit_programm()
 
