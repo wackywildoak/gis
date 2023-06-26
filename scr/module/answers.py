@@ -31,37 +31,34 @@ def close_tabs(): #закрытие вкладок
     for i in range(0, 10):
         pag.moveTo(293, 11)
         pag.click()
-        sleep(delay)
-
+       
 def add_tab(): #открытие новых вкладок
     for i in range(0, 10):
-        pag.moveTo(533, 769)
+        pag.moveTo(509, 790)
         pag.click(button="right")
-        pag.moveTo(555, 783)
-        sleep(delay)
+        pag.moveTo(591, 794)
         pag.click()
-        pag.moveTo(533, 769)
-        sleep(delay)
-        pag.scroll(-228)
+        pag.moveTo(509, 790)
+        pag.scroll(-229)
 
 def clicks(): #ответ за запрос
     sleep(delay)
-    pag.moveTo(1411, 841) #добавить ответ
+    gisFind.find_ans() #добавить ответ
     pag.click()
     sleep(delay)
-    pag.moveTo(1032, 271) #нет
+    pag.moveTo(1023, 270) #нет
     pag.click()
     sleep(delay)
-    pag.moveTo(1287, 483) #сохранить ответ
+    pag.moveTo(1287, 489) #сохранить ответ
     pag.click()
     sleep(delay)
-    pag.moveTo(1405, 896) #отправить ответ
+    gisFind.find_push() #отправить ответ
     pag.click()
     sleep(delay)
-    pag.moveTo(1005, 283) #да
+    pag.moveTo(1011, 283) #да
     pag.click()
     sleep(delay)
-    pag.moveTo(946, 277) #ок
+    pag.moveTo(949, 275) #ок
     pag.click()
     sleep(delay)
 
